@@ -30,7 +30,14 @@ Route::get('hello', [HelloController::class, 'index']);
 // Route::get('hello/other', [HelloController::class, 'other']);
 Route::post('hello', [HelloController::class, 'post']);
 
-Route::get('hello/test/{hoge?}', [HelloController::class,'test']);
+Route::get('hello/test/{hoge?}', [HelloController::class, 'test']);
 
-Route::get('hello/add',[HelloController::class,'add']);
-Route::post('hello/add',[HelloController::class,'create']);
+Route::get('hello/add', [HelloController::class, 'add']);
+Route::post('hello/add', [HelloController::class, 'create']);
+
+
+//sns
+use App\Http\Controllers\SnsController;
+
+Route::get('sns', [SnsController::class, 'index']);
+Route::get('sns/login', [SnsController::class, 'login']);
